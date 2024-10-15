@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: Helvetica, sans-serif;
+    font-size: 36px;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.container{
+    display: flex;
+}
+
+.box{
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    background-image: url(image/heading.png);
+    background-attachment: fixed;
+}
+
+.box span{
+    font-weight: bold;
+    color: black;
+}
+.heading{
+    display: flex;
+    left: 30px;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+
+}
+.heading > h1{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.image img{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.links{
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.links:nth-child(1){
+    font-weight: bold;
+}
+
+.imgsection img{
+    width: 100%;
+}
+
+.page, .article, .event{
+    margin: 3%;
+}
+
+.page > p, .article > p, .event > p{
+    margin-top: 5%;
+}
+
+ #footer{
+    background-image: linear-gradient(#17826D, #C8E7AC);
+ }
+
+ .last{
+    color: black;
+    padding: 3%;
+ }
+
+
+@media screen and (min-width:960px) {
+    *{
+        margin: 0;
+    }
+
+    main > *, section > *, article > *{    
+        display: flex;
+      }
+      .box{
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+      .box > p{
+        font-size: 30px;
+      }
+      .heading{
+        position: static;
+        justify-content: center;
+      }
+      .heading > h1{
+        font-size: 36px;
+      }
+      .image{
+        display: flex;
+        width: 30%;
+      }
+      .image img{
+        width: 100%;
+      }
+      section > .links{
+        margin: 0;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+      }
+      .links > p{
+        justify-self: center;
+      }
+
+
+      /**.flex-box{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      } /**/
+    }
